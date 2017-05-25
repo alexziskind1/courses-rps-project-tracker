@@ -1,0 +1,25 @@
+Page {
+    margin-top: -20;
+}
+
+.modal-wrapper {
+    margin-top: 20;
+}
+
+.form-group {
+    margin: 15 0 15 0;
+    border-width: 1;
+    border-top-color: #e4e4e6;
+    border-bottom-color: #e4e4e6;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.form-group-label {
+    margin-bottom: -10;
+}
+
+.input-field-border {
+    border-bottom-width: 0.5;
+    border-bottom-color: #e4e4e6;
+}

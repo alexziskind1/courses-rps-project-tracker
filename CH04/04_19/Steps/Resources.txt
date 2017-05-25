@@ -1,0 +1,19 @@
+Shake animation
+
+@keyframes shake {
+  8%, 41% {
+    transform: translateX(-10);
+  }
+  25%, 58% {
+    transform: translateX(10);
+  }
+  75% {
+    transform: translateX(-5);
+  }
+  92% {
+    transform: translateX(5);
+  }
+  0%, 100% {
+    transform: translateX(0);
+  }
+}

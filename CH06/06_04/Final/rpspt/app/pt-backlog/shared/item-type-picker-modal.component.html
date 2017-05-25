@@ -1,0 +1,25 @@
+<GridLayout class="modal-wrapper " rows="50, *">
+
+    <StackLayout row="0" class="pt-item-detail-header bold">
+        <GridLayout columns="*, 50">
+            <Label col="0" [text]="itemTitle" textWrap="true" class="pt-item-detail-header-title"></Label>
+            <GridLayout col="1" class="modal-close-wrapper" (tap)="close()">
+                <Image src="res://icon_close_white" class="modal-close-img"></Image>
+            </GridLayout>
+
+        </GridLayout>
+    </StackLayout>
+
+    <StackLayout row="1">
+        <Label [text]="prompt" class="form-group-label"></Label>
+
+        <StackLayout class="form-group">
+            <StackLayout *ngFor="let item of items; let i = index;" (tap)="typeSelect(item.title)" orientation="horizontal" class="modal-select-item">
+                <Image [src]="item.img" col="0" class="input-img"></Image>
+                <Label [text]="item.title" col="1" class="input"></Label>
+            </StackLayout>
+        </StackLayout>
+
+    </StackLayout>
+
+</GridLayout>

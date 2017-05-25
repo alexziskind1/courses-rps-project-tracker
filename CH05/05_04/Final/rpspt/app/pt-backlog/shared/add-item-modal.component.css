@@ -1,0 +1,13 @@
+.btn-item-add-wrapper {
+    vertical-align: middle;
+    height: 60;
+}
+.btn-item-add {
+    height: 100%;
+    background-color: #e4e4e6;
+    color: #ffffff;
+}
+.btn-item-add.enabled {
+    background-color: #555c95;
+    color: #ffffff;
+}

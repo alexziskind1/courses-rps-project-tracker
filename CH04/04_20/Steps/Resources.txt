@@ -1,0 +1,12 @@
+imperative animation reverse function
+
+    private loginAnimationReverse() {
+        return this.btnLoginWrapper.animate({
+            scale: { x: 1, y: 1 },
+            backgroundColor: new Color('#555a97'),
+            duration: 200,
+            curve: enums.AnimationCurve.cubicBezier(0, .75, .22, 1)
+        }).then(() => {
+            this.btnLogin.opacity = 1;
+        });
+    }

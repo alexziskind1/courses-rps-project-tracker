@@ -1,0 +1,7 @@
+        Layout for each templated backlog item
+        
+        <GridLayout class="li-wrapper" rows="60" columns="10, 50,  *, 100">
+            <StackLayout class="li-info-wrapper" col="2">
+                <Label class="li-title" [text]="item.title"></Label>
+            </StackLayout>
+        </GridLayout>

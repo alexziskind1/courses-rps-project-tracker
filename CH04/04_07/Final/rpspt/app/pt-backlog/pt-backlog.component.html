@@ -1,0 +1,19 @@
+<ActionBar title="Backlog">
+    <ActionItem (tap)="showSlideout($event)" ios.position="right">
+        <StackLayout class="navbar_image_wrapper" ios:horizontalAlignment="right">
+            <Label text="MENU"></Label>
+        </StackLayout>
+    </ActionItem>
+</ActionBar>
+
+<RadSideDrawer #drawer>
+
+    <StackLayout tkDrawerContent>
+        <Button text="LOGOUT" (tap)="logoutTap()"></Button>
+    </StackLayout>
+
+    <StackLayout tkMainContent>
+        <pt-item-list></pt-item-list>
+    </StackLayout>
+
+</RadSideDrawer>

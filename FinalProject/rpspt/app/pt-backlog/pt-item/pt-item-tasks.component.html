@@ -1,0 +1,39 @@
+<StackLayout [@slideIn]="animationState">
+    <StackLayout *ngIf="item">
+        <ScrollView #tasksSrollView>
+            <StackLayout>
+                <StackLayout class="form-group">
+                    <StackLayout class="input-field" [height]="taskHeight(newTaskTitle)">
+                        <GridLayout columns="40, *, 70">
+                            <StackLayout col="0"></StackLayout>
+                            <StackLayout col="1" class="task-new-text-wrapper">
+                                <TextView #newTaskTV [(ngModel)]="newTaskTitle" hint="Enter new task..." class="input"></TextView>
+                            </StackLayout>
+                            <Button col="2" class="btn-task-add" [class.enabled]="newTaskTitle.length > 0" isEnabled="{{ newTaskTitle.length > 0 }}"
+                                text="add" (tap)="addTapped(newTaskTV)"></Button>
+                        </GridLayout>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout class="form-group">
+                    <StackLayout class="input-field input-field-border" *ngFor="let task of tasks" [height]="taskHeight(task.title)">
+                        <Label [text]="i"></Label>
+                        <GridLayout columns="40, *">
+
+                            <GridLayout col="0" (tap)="toggleTapped(task)">
+                                <Image [src]="task.completed ? 'res://checkbox_checked' : 'res://checkbox_unchecked'" class="task-checkbox"></Image>
+                            </GridLayout>
+
+                            <StackLayout col="1">
+                                <TextView [ngModel]="task.title" (ngModelChange)="taskTitleChange(task, $event)" class="input"></TextView>
+                            </StackLayout>
+
+                        </GridLayout>
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+
+    </StackLayout>
+</StackLayout>

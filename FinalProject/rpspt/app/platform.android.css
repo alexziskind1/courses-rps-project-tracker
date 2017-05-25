@@ -1,0 +1,25 @@
+Page {
+    padding-top: 10;
+}
+
+.modal-wrapper {
+    margin-top: 0;
+}
+
+.form-group {
+    margin: 0 0 0 0;
+    padding-top: 20;
+    padding-bottom: 20;
+}
+
+.form-group-label {
+    margin-bottom: 10;
+}
+
+.input-label {
+    vertical-align: middle;
+}
+
+.input-user {
+    vertical-align: middle;
+}

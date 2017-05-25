@@ -1,0 +1,36 @@
+<ActionBar title="Backlog">
+    <ActionItem (tap)="showSlideout($event)" ios.position="right">
+        <StackLayout class="navbar_image_wrapper" ios:horizontalAlignment="right">
+            <Label text="MENU"></Label>
+        </StackLayout>
+    </ActionItem>
+</ActionBar>
+
+<RadSideDrawer #drawer>
+
+    <StackLayout tkDrawerContent>
+
+        <GridLayout class="side-drawer-panel" rows="auto, *, 100">
+            <StackLayout row="0">
+                <Label text="LOGO HERE"></Label>
+            </StackLayout>
+
+            <StackLayout row="1">
+                <Button text="MY ITEMS"></Button>
+                <Button text="OPEN ITEMS"></Button>
+                <Button text="FINISHED ITEMS"></Button>
+            </StackLayout>
+
+            <StackLayout row="2">
+                <Button text="LOGOUT" (tap)="logoutTap()"></Button>
+            </StackLayout>
+        </GridLayout>
+
+        <Button text="LOGOUT" (tap)="logoutTap()"></Button>
+    </StackLayout>
+
+    <StackLayout tkMainContent>
+        <pt-item-list></pt-item-list>
+    </StackLayout>
+
+</RadSideDrawer>

@@ -1,0 +1,23 @@
+<GridLayout rows="auto, auto, 50" class="form" backgroundColor="#ffffff">
+
+    <StackLayout row="0" class="logo-container">
+        <Image src="res://rps_logo" stretch="none"></Image>
+    </StackLayout>
+
+    <StackLayout row="1">
+        <StackLayout class="input-field">
+            <Label text="Username" class="label"></Label>
+            <TextField class="input input-border"></TextField>
+        </StackLayout>
+        <StackLayout class="input-field">
+            <Label text="Password" class="label"></Label>
+            <TextField class="input input-border" secure="true"></TextField>
+        </StackLayout>
+
+        <StackLayout class="btn-login-wrapper">
+            <Button text="SIGN IN" class="btn btn-primary" (tap)="login()"></Button>
+        </StackLayout>
+    </StackLayout>
+
+    <ActivityIndicator row="2" [busy]="isLoading"></ActivityIndicator>
+</GridLayout>

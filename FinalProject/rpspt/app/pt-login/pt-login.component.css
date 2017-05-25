@@ -1,0 +1,57 @@
+.login-container {
+  padding: 50;
+  background-color: #333333;
+  margin-top: 20;
+}
+
+.logo-container {
+  margin-bottom: 20;
+}
+
+.login-field {
+  border-width: 1;
+  border-color: #999999;
+  margin-bottom: 20;
+  padding: 10;
+  color: #ffffff;
+  placeholder-color: #999999;
+}
+
+.btn-login-wrapper {
+    vertical-align: middle;
+    height: 100%;
+    background-color: #555a97;
+}
+
+.btn-login {
+   vertical-align: middle;
+    height: 100%;
+    background-color: #555a97;
+    border-color: #555a97;
+    border-width: 1;
+    color: white;
+    padding: 10;
+}
+
+.login-failed {
+  animation-name: shake;
+  animation-duration: 0.5s;
+}
+
+@keyframes shake {
+  8%, 41% {
+    transform: translateX(-10);
+  }
+  25%, 58% {
+    transform: translateX(10);
+  }
+  75% {
+    transform: translateX(-5);
+  }
+  92% {
+    transform: translateX(5);
+  }
+  0%, 100% {
+    transform: translateX(0);
+  }
+}

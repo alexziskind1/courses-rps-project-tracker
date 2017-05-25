@@ -1,0 +1,29 @@
+<GridLayout class="modal-wrapper " rows="50, *">
+
+    <StackLayout row="0" class="pt-item-detail-header bold">
+        <GridLayout columns="*, 50">
+            <Label col="0" [text]="itemTitle" textWrap="true" class="pt-item-detail-header-title"></Label>
+            <GridLayout col="1" class="modal-close-wrapper" (tap)="close()">
+                <Image src="res://icon_close_white" class="modal-close-img"></Image>
+            </GridLayout>
+
+        </GridLayout>
+    </StackLayout>
+
+    <StackLayout row="1">
+        <Label [text]="prompt" class="form-group-label"></Label>
+
+        <StackLayout class="form-group form-list">
+            <ListView [items]="userService.usersObs | async" (itemTap)="listItemTap($event)">
+                <template let-user="item" let-i="index">
+                    <GridLayout columns="50, 200, *" class="user-picker-row">
+                        <Image col="0" [src]="user.avatar" stretch="aspectFit"></Image>
+                        <Label col="1" [text]="user.fullName" class="user-picker-name"></Label>
+                    </GridLayout>
+                </template>
+            </ListView>
+        </StackLayout>
+
+    </StackLayout>
+
+</GridLayout>

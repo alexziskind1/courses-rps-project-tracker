@@ -1,0 +1,19 @@
+<ActionBar title="Item">
+    <NavigationButton text="Back" android.systemIcon="ic_menu_back" (tap)="onNavBackTap()"></NavigationButton>
+
+    <ActionItem (tap)="onDelete()" ios.systemIcon="16" ios.position="right" text="delete" android.systemIcon="ic_menu_delete"
+        android.position="actionBar"></ActionItem>
+
+</ActionBar>
+
+<StackLayout class="pt-item-container">
+
+    <StackLayout class="pt-item-detail-header">
+        <Label [text]="itemTitle" class="pt-item-detail-header-title"></Label>
+
+        <SegmentedBar #sb selectedBackgroundColor="#b6cb93" [items]="myNavItems" selectedIndex="0" (selectedIndexChange)="selectedItemDetailScreenIndexChanged(sb)"></SegmentedBar>
+    </StackLayout>
+
+    <router-outlet></router-outlet>
+
+</StackLayout>

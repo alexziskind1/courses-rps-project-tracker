@@ -1,0 +1,19 @@
+<GridLayout class="login-container">
+    <GridLayout rows="auto, auto, 50">
+
+        <StackLayout row="0" class="logo-container">
+            <Image src="res://rps_logo" stretch="aspectFit"></Image>
+        </StackLayout>
+
+        <StackLayout #loginInputs row="1">
+            <TextField hint="Username" class="login-field" [(ngModel)]="loginModel.username" [isEnabled]="!isLoading"></TextField>
+            <TextField hint="Password" class="login-field" secure="true" [(ngModel)]="loginModel.password" [isEnabled]="!isLoading"></TextField>
+            <StackLayout #btnLoginWrapper class="btn-login-wrapper">
+                <Button #btnLogin text="SIGN IN" class="btn-login" (tap)="login()" [isEnabled]="!isLoading"></Button>
+            </StackLayout>
+        </StackLayout>
+
+
+        <ActivityIndicator row="1" [busy]="isLoading"></ActivityIndicator>
+    </GridLayout>
+</GridLayout>

@@ -1,0 +1,16 @@
+.items-list {
+    height: 50%;
+}
+
+.li-title {
+    font-size: 14;
+    color: red;
+}
+
+.odd-row {
+    color: blue;
+}
+
+.even-row {
+    color: green;
+}

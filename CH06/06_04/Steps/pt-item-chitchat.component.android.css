@@ -1,0 +1,29 @@
+.img-comment-avatar {
+    margin-top: 5;
+}
+.comment-text-wrapper {
+    margin-left: 10;
+}
+.comment-name {
+    font-size: 10;
+    font-weight: bold;
+    color: #555a97;
+    margin-left: 5;
+}
+.comment-date {
+    font-size: 10;
+    font-weight: bold;
+    color: #555a97;
+    horizontal-align: right;
+}
+
+.btn-task-add {
+    height: 40;
+    width: 60;
+    border-radius: 30;
+    margin-right: 10;
+}
+
+.comment-new-text {
+    padding-top: 20;
+}

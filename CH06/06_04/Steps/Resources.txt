@@ -1,0 +1,46 @@
+pt-item.component.ts selectedItemDetailScreenIndexChanged update
+        
+        let newIndex = segBar.selectedIndex;
+        if (this._selectedItemDetailScreenIndex !== newIndex && newIndex >= 0 && newIndex < this._itemDetailScreens.length) {
+            this._selectedItemDetailScreenIndex = newIndex;
+            let path = this._itemDetailScreens[this._selectedItemDetailScreenIndex].routePath;
+            // Navigate with relative link
+            this.routerExtensions.navigate([path], { relativeTo: this.route });
+        }
+        
+        
+
+
+
+
+pt-backlog.routing additions imports
+
+import { PTItemDetailsComponent } from "./pt-item/pt-item-details.component";
+import { PTItemTasksComponent } from "./pt-item/pt-item-tasks.component";
+import { PTItemChitchatComponent } from "./pt-item/pt-item-chitchat.component";
+
+
+pt-backlog.routing additions child routes
+
+children: [
+            {
+                path: "",
+                redirectTo: "pt-item-details",
+                pathMatch: "full"
+            },
+            {
+                path: "pt-item-details",
+                component: PTItemDetailsComponent
+            },
+            {
+                path: "pt-item-tasks",
+                component: PTItemTasksComponent
+            },
+            {
+                path: "pt-item-chitchat",
+                component: PTItemChitchatComponent
+            }
+        ]
+        
+        
+

@@ -1,0 +1,14 @@
+<GridLayout class="modal-wrapper" rows="50, *" style="background-color: #999999">
+
+    <StackLayout row="1">
+        <Label [text]="prompt" class="form-group-label"></Label>
+
+        <StackLayout>
+            <StackLayout *ngFor="let item of items" (tap)="typeSelect(item.title)">
+                <Label [text]="item.title"></Label>
+            </StackLayout>
+        </StackLayout>
+
+    </StackLayout>
+
+</GridLayout>

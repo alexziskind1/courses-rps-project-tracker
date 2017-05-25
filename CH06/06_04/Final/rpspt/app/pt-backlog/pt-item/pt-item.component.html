@@ -1,0 +1,16 @@
+<ActionBar>
+</ActionBar>
+
+<StackLayout class="pt-item-container">
+    <StackLayout class="pt-item-detail-header">
+        <Label *ngIf="item" [text]="item.title" class="pt-item-detail-header-title"></Label>
+
+        <SegmentedBar #sb [items]="myNavItems" selectedIndex="0" (selectedIndexChange)="selectedItemDetailScreenIndexChanged(sb)">
+        </SegmentedBar>
+
+    </StackLayout>
+
+
+    <router-outlet></router-outlet>
+
+</StackLayout>

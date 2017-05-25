@@ -1,0 +1,10 @@
+<StackLayout #itemTypeRow class="input-field input-field-border">
+    <GridLayout rows="40" columns="100, *" (tap)="showTypeModal()">
+        <Label col="0" text="Type" class="form-field-col"></Label>
+
+        <StackLayout col="1" #itemTypeName orientation="horizontal" class="form-field-col right">
+            <Label *ngIf="item" [text]="item.type" class="input"></Label>
+        </StackLayout>
+
+    </GridLayout>
+</StackLayout>

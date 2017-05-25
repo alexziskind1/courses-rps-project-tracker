@@ -1,0 +1,58 @@
+.backlog-container {
+    margin-top: 0;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+ActionBar {
+     color: #ffffff;
+}
+
+.action-bar-text-item-right {
+    color: #ffffff;
+    padding-right:15;
+}
+
+.side-drawer-panel {
+    background-color: #333333;
+}
+
+.slide-out-img {
+    margin: 20 0 30 12;
+}
+
+.slide-out-btn {
+    color: #b6cb93;
+    font-size: 19;
+    height: 44;
+    text-align: left;
+    horizontal-align: stretch;
+    margin: 0 12;
+    background-color: #333333;
+}
+
+.slide-out-btn-selected {
+    color: white;
+    font-size: 19;
+    height: 44;
+    text-align: left;
+    horizontal-align: stretch;
+    margin: 0 12;
+    background-color: #333333;
+}
+
+.list-container {
+    height: 100%;
+}
+
+.btn-add-wrapper {
+    vertical-align: middle;
+}
+.btn-add {
+    vertical-align: middle;
+    height: 100%;
+    background-color: #555a97;
+    border-color: #555a97;
+    border-width: 1;
+    color: white;
+}

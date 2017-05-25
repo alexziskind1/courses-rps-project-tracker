@@ -1,0 +1,16 @@
+<StackLayout orientation="horizontal" class="pm-wrapper">
+    <StackLayout class="pm-left-wrapper">
+        <Button (tap)="decTap()" class="pm-left">
+            <FormattedString>
+                <Span text="-" fontSize="26" ios:foregroundColor="gray" android:foregroundColor="white"></Span>
+            </FormattedString>
+        </Button>
+    </StackLayout>
+    <StackLayout class="pm-right-wrapper">
+        <Button (tap)="incTap()" class="pm-right">
+            <FormattedString>
+                <Span text="+" fontSize="26" ios:foregroundColor="gray" android:foregroundColor="white"></Span>
+            </FormattedString>
+        </Button>
+    </StackLayout>
+</StackLayout>

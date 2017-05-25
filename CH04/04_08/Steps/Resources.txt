@@ -1,0 +1,26 @@
+Side drawer content
+
+        <GridLayout class="side-drawer-panel" rows="auto, *, 100">
+            <StackLayout row="0">
+                <Label text="LOGO HERE"></Label>
+            </StackLayout>
+
+            <StackLayout row="1">
+                <Button text="MY ITEMS"></Button>
+                <Button text="OPEN ITEMS"></Button>
+                <Button text="FINISHED ITEMS"></Button>
+            </StackLayout>
+
+            <StackLayout row="2">
+                <Button text="LOGOUT" (tap)="logoutTap()"></Button>
+            </StackLayout>
+        </GridLayout>
+
+
+Inline style
+
+    styles: [`
+        .side-drawer-panel {
+            background-color: #333333;
+        }
+    `]

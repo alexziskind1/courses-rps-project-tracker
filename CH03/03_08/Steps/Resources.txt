@@ -1,0 +1,30 @@
+static data item
+
+const ITEM: IPTItem =
+    { id: '1', title: 'item 1', description: 'item 1 desc', estimate: 5, priority: PriorityEnum.Low, status: StatusEnum.Open, tasks: [], type: ItemTypeEnum.Bug, dateCreated: new Date(), dateModified: new Date(), comments: [], assignee: null };
+
+
+
+Item markup
+
+<StackLayout class="pt-item-container">
+    <StackLayout class="pt-item-detail-header">
+        <Label [text]="item.title" class="pt-item-detail-header-title"></Label>
+    </StackLayout>
+</StackLayout>
+
+
+
+app.css additions
+
+.pt-item-detail-header {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10;
+}
+
+.pt-item-detail-header.bold {
+    font-weight: bold;
+}
+
+

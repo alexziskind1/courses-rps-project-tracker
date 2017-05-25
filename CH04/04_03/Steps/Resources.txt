@@ -1,0 +1,18 @@
+Item detail screen title to path mapping
+
+    private _itemDetailScreens = [
+        { title: 'Details', routePath: 'pt-item-details' },
+        { title: 'Tasks', routePath: 'pt-item-tasks' },
+        { title: 'Chitchat', routePath: 'pt-item-chitchat' }
+    ];
+    public myNavItems: Array<SegmentedBarItem> = [];
+
+
+
+Segmented Bar Item population
+
+        for (let i = 0; i < this._itemDetailScreens.length; i++) {
+            let tmpSegmentedBarItem: SegmentedBarItem = <SegmentedBarItem>new SegmentedBarItem();
+            tmpSegmentedBarItem.title = this._itemDetailScreens[i].title;
+            this.myNavItems.push(tmpSegmentedBarItem);
+        }

@@ -1,0 +1,45 @@
+<StackLayout [@slideIn]="animationState">
+    <StackLayout *ngIf="item">
+        <ScrollView #tasksSrollView>
+            <StackLayout>
+                <StackLayout class="form-group">
+                    <StackLayout class="input-field" [height]="commentHeight(newCommentText)">
+                        <GridLayout columns="40, *, 70">
+                            <StackLayout col="0">
+                                <Image [src]="currentUserAvatar" stretch="aspectFit" class="img-comment-avatar"></Image>
+                            </StackLayout>
+                            <StackLayout col="1">
+                                <TextView #newCommentTV [(ngModel)]="newCommentText" hint="Enter new comment..." class="comment-new-text"></TextView>
+                            </StackLayout>
+                            <Button col="2" class="btn-task-add" [class.enabled]="newCommentText.length > 0" isEnabled="{{ newCommentText.length > 0 }}"
+                                text="add" (tap)="addTapped(newCommentTV)"></Button>
+                        </GridLayout>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout class="form-group">
+                    <StackLayout class="input-field input-field-border" *ngFor="let comment of comments" [height]="commentHeight(comment.title)">
+                        <GridLayout columns="40, *">
+
+                            <StackLayout col="0">
+                                <Image [src]="comment.user.avatar" stretch="aspectFit" class="img-comment-avatar"></Image>
+                            </StackLayout>
+
+                            <GridLayout col="1" rows="20, *" columns="*, 150" class="comment-text-wrapper">
+                                <Label col="0" row="0" [text]="comment.user.fullName" class="comment-name"></Label>
+                                <Label col="1" row="0" [text]="comment.dateCreated | date" class="comment-date"></Label>
+
+                                <TextView colSpan="2" row="1" [text]="comment.title" editable="false"></TextView>
+                            </GridLayout>
+                        </GridLayout>
+                    </StackLayout>
+                </StackLayout>
+
+
+
+            </StackLayout>
+        </ScrollView>
+
+
+    </StackLayout>
+</StackLayout>

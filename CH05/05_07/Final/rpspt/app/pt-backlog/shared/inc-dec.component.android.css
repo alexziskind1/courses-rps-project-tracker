@@ -1,0 +1,46 @@
+.pm-wrapper {
+    height:30;
+    width: 70;
+}
+
+.pm-left-wrapper {
+    border-width: 1;
+    border-color: #30bcff;
+    border-radius: 15;
+    background-color: #30bcff;
+    width: 30;
+    height: 30;
+}
+
+.pm-right-wrapper {
+    border-width: 1;
+    border-color: #30bcff;
+    border-radius: 15;
+    background-color: #30bcff;
+    width: 30;
+    height: 30;
+    margin-left: 8;
+}
+
+.pm-left {
+    font-size: 36;
+    width: 30;
+    border-radius: 15;
+    border-width: 0;
+    padding: 0;
+    margin-top: -5;
+}
+
+.pm-right {
+    font-size: 36;
+    width: 30;
+    border-radius: 15;
+    border-width: 0;
+    padding: 0;
+    margin-top: -4;
+}
+
+.pm-wrapper-disabled {
+    background-color: #eeeeee;
+    border-color: #eeeeee;
+}

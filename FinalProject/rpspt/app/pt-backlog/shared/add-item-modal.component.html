@@ -1,0 +1,61 @@
+<GridLayout class="modal-wrapper " rows="50, *">
+
+    <StackLayout row="0" class="pt-item-detail-header bold">
+        <GridLayout columns="*, 50">
+            <Label col="0" [text]="newItem.title" textWrap="true" class="pt-item-detail-header-title"></Label>
+            <GridLayout col="1" class="modal-close-wrapper" (tap)="tapCancel()">
+                <Image src="res://icon_close_white" class="modal-close-img"></Image>
+            </GridLayout>
+
+        </GridLayout>
+    </StackLayout>
+
+    <StackLayout row="1">
+
+        <ScrollView>
+            <StackLayout>
+
+                <Label [text]="prompt" class="form-group-label"></Label>
+
+                <StackLayout class="form-group">
+                    <StackLayout class="input-field input-field-border">
+                        <TextView hint="Enter item title..." [(ngModel)]="newItem.title" [height]="textViewFieldHeight(newItem.title)" class="input"></TextView>
+                    </StackLayout>
+
+                    <StackLayout class="input-field">
+                        <TextView hint="Enter item description..." [(ngModel)]="newItem.description" [height]="textViewFieldHeight(newItem.description)"
+                            class="input"></TextView>
+                    </StackLayout>
+                </StackLayout>
+
+
+                <StackLayout class="form-group">
+                    <StackLayout #itemTypeRow class="input-field">
+                        <GridLayout rows="40" [columns]="formFieldGridCols" (tap)="showTypeModal()">
+
+                            <Label col="0" text="Type" class="input form-field-col"></Label>
+
+
+                            <StackLayout col="1" #itemTypeName orientation="horizontal" class="form-field-col right">
+                                <Image [src]="newItem.type | typeImage" class="input-img"></Image>
+                                <Label [text]="newItem.type | typeDisplay" class="input"></Label>
+                            </StackLayout>
+
+                            <GridLayout col="2" class="icon-arrow-wrapper">
+                                <Image src="res://icon_arrow_forward" class="icon-arrow"></Image>
+                            </GridLayout>
+                        </GridLayout>
+                    </StackLayout>
+                </StackLayout>
+
+
+                <StackLayout class="btn-item-add-wrapper">
+                    <Button text="Done" (tap)="tapDone()" class="btn-item-add" [class.enabled]="btnDoneEnabled" [isEnabled]="btnDoneEnabled"></Button>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+
+    </StackLayout>
+
+</GridLayout>

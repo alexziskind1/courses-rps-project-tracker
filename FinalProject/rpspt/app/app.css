@@ -1,0 +1,167 @@
+@import url("~/platform.css");
+
+Page {
+    background-color:  #4b5833;
+}
+
+ActionBar {
+    background-color:  #4b5833;
+    color: white;
+}
+
+TextView {
+    font-size: 14;
+}
+
+Button:highlighted {
+  animation-name: btnHighlight;
+  animation-duration: 500ms;
+}
+
+@keyframes btnHighlight {
+  from { background-color: #555c95; }
+  to { background-color: #4b5833; } 
+}
+
+.form-field-col {
+    vertical-align: middle;
+}
+
+.form-field-col.right {
+    horizontal-align: right;
+}
+
+.modal-wrapper {
+    background-color: #eeedf2;
+}
+
+.modal-close-wrapper {
+    horizontal-align: right;
+}
+.modal-close-img {
+    height: 20;
+}
+
+.modal-select-item {
+    font-size: 14;
+    margin: 15;
+}
+
+.navbar_image_wrapper {
+    width: 30; 
+    height:30;
+}
+
+.indicator-priority {
+    border-width: 1;
+    border-radius: 4;
+    padding:2;
+    text-align: center;
+    width: 70;
+}
+
+.indicator-priority.critical {
+    color: #820101;
+    background-color: #ffc9c9;
+    border-color: #820101;
+}
+
+.indicator-priority.high {
+    color: #b27100;
+    background-color: #ffe4b7;
+    border-color: #b27100;
+}
+
+.indicator-priority.medium {
+    color: #0c6d00;
+    background-color: #cfffc9;
+    border-color: #0c6d00;
+}
+
+.indicator-priority.low {
+    color: #002b6d;
+    background-color: #c1daff;
+    border-color: #002b6d;
+}
+
+.form-group {
+    background-color: #ffffff;
+}
+
+.form-list.form-list {
+    margin: 15 0 0 0;
+}
+
+.form-group-label {
+    color: #a3a3a3;
+    text-transform: uppercase;
+    font-size: 12;
+    padding: 15 15 0 15;
+}
+
+.task-checkbox {
+    height: 25;
+    horizontal-align: left;
+}
+
+.btn-task-add {
+    background-color: #e4e4e6;
+    color: #ffffff;
+    margin-right: -15;
+}
+.btn-task-add.enabled {
+    background-color: #555c95;
+    color: #ffffff;
+}
+
+.input-field {
+    margin-left: 15;
+    margin-right: 15;
+    font-size: 14;
+}
+
+.input {
+    color: #4b5833;
+}
+
+.input-user {
+    font-size: 10;
+    font-weight: bold;
+    color: #555a97;
+}
+
+.icon-arrow {
+    height: 15;
+    vertical-align: middle;
+    horizontal-align: right;
+}
+
+.input-img {
+    height: 20;
+    margin-left: 10;
+    margin-right: 10;
+}
+.input-img.avatar {
+    height: 30;
+    margin-right: 0;
+}
+
+.pt-item-detail-header {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10;
+}
+
+.pt-item-detail-header.bold {
+    font-weight: bold;
+}
+
+.user-picker-row {
+    margin: 0 15 0 15;
+    height: 60;
+}
+.user-picker-name {
+    font-size: 14;
+    color: #555a97;
+    margin-left: 10;
+}

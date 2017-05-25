@@ -1,0 +1,23 @@
+<ListView [items]="ptItems" class="items-list" (itemTap)="listItemTap($event)">
+    <template let-item="item" let-i="index">
+        <GridLayout rows="60" columns="10, 50, *, 100">
+
+            <StackLayout class="li-indicator" col="0">
+                <Label [class]="getIndicatorClass(item)"></Label>
+            </StackLayout>
+
+            <GridLayout col="1" class="li-avatar">
+                <Image *ngIf="item.assignee" [src]="item.assignee.avatar" stretch="aspectFit"></Image>
+            </GridLayout>
+
+            <StackLayout col="2">
+                <Label class="li-title" [text]="item.title"></Label>
+                <Label class="li-estimate" [text]="'estimate: ' + item.estimate"></Label>
+            </StackLayout>
+
+            <StackLayout col="3">
+                <Label [text]="item.dateCreated | date"></Label>
+            </StackLayout>
+        </GridLayout>
+    </template>
+</ListView>
