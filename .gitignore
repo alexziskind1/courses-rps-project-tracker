@@ -1,0 +1,11 @@
+**/*.js
+**/*.js.map
+*.log
+node_modules
+lib
+.DS_Store
+*/node_modules
+*/platforms/ios
+*/platforms/android
+hooks
+platforms

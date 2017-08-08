@@ -2,7 +2,7 @@
 import { NgModule } from "@angular/core";
 
 //nativescript imports
-import { NativeScriptModule } from "nativescript-angular/platform";
+import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { SIDEDRAWER_DIRECTIVES } from "nativescript-telerik-ui/sidedrawer/angular";
 

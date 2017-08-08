@@ -2,7 +2,7 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 
 //nativescript imports
-import { NativeScriptModule } from "nativescript-angular/platform";
+import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 
 //app imports

@@ -1,3 +1,0 @@
-"use strict";
-exports.DEMO_PASSWORD = 'Nuvious';
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uc3RhbnRzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiY29uc3RhbnRzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBYSxRQUFBLGFBQWEsR0FBRyxTQUFTLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgREVNT19QQVNTV09SRCA9ICdOdXZpb3VzJzsiXX0=

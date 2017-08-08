@@ -18,7 +18,7 @@ export function setStatusBarColors() {
     // See http://bradmartin.net/2016/03/10/fullscreen-and-navigation-bar-color-in-a-nativescript-android-app/
     // for details on the technique used.
     if (platform.isAndroid) {
-        application.android.onActivityStarted = function () {
+        application.android.on('activityStarted', () => {
             if (application.android && platform.device.sdkVersion >= "21") {
                 const View = android.view.View;
                 const window = application.android.startActivity.getWindow();
@@ -31,6 +31,6 @@ export function setStatusBarColors() {
                     | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                     | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
             }
-        };
+        });
     }
 }
