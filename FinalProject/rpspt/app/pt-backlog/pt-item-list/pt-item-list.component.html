@@ -1,5 +1,5 @@
 <ListView class="items-list" [items]="ptItemsSubj | async" (itemTap)="listItemTap($event)" separatorColor="#97a879">
-    <template let-item="item" let-i="index">
+    <ng-template let-item="item" let-i="index">
         <GridLayout class="li-wrapper" rows="60" columns="10, 50,  *, 100">
             <StackLayout class="li-indicator" row="0" col="0">
                 <Label [class]="getIndicatorClass(item)"></Label>
@@ -19,5 +19,5 @@
             </StackLayout>
 
         </GridLayout>
-    </template>
+    </ng-template>
 </ListView>

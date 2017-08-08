@@ -15,12 +15,12 @@
 
         <StackLayout class="form-group form-list">
             <ListView [items]="userService.usersObs | async" (itemTap)="listItemTap($event)">
-                <template let-user="item" let-i="index">
+                <ng-template let-user="item" let-i="index">
                     <GridLayout columns="50, 200, *" class="user-picker-row">
                         <Image col="0" [src]="user.avatar" stretch="aspectFit"></Image>
                         <Label col="1" [text]="user.fullName" class="user-picker-name"></Label>
                     </GridLayout>
-                </template>
+                </ng-template>
             </ListView>
         </StackLayout>
 
